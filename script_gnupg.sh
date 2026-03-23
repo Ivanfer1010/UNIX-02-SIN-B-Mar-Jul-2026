@@ -135,4 +135,7 @@ gpg --list-keys
 #sub   rsa4096 2026-03-23 [E] [expires: 2027-03-23]
 
 #Guardar un mensaje para mi compa
-echo "Hola Francisco David" > doc_no_cifrdo.txt
+echo "Hola Francisco David" > doc_no_cifrado.txt
+
+#El comando siguiente crea y cifra el archivo con la llave publica
+gpg --output doc_cifrado.txt --encrypt --recipient 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8 doc_no_cifrado.txt
