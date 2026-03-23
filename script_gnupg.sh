@@ -139,3 +139,14 @@ echo "Hola Francisco David" > doc_no_cifrado.txt
 
 #El comando siguiente crea y cifra el archivo con la llave publica
 gpg --output doc_cifrado.txt --encrypt --recipient 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8 doc_no_cifrado.txt
+#gpg: 545A4A9128BC82C3: There is no assurance this key belongs to the named user
+
+#sub  rsa4096/545A4A9128BC82C3 2026-03-23 Francis Acuña (Hola) <panchode05@gmail.com>
+# Primary key fingerprint: 867C E0EF FC6D 4FD2 A925  3238 48E9 515B BA7B 9AE8
+#      Subkey fingerprint: 0AB0 A3ED 4D6F DBC9 8AEB  932C 545A 4A91 28BC 82C3
+
+#It is NOT certain that the key belongs to the person named
+#in the user ID.  If you *really* know what you are doing,
+#you may answer the next question with yes.
+
+#Use this key anyway? (y/N) y
