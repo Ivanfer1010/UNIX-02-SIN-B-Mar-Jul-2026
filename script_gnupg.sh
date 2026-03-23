@@ -150,3 +150,7 @@ gpg --output doc_cifrado.txt --encrypt --recipient 867CE0EFFC6D4FD2A925323848E95
 #you may answer the next question with yes.
 
 #Use this key anyway? (y/N) y
+
+#Desifra el mensaje encriptado
+gpg --decrypt Ivan.txt
+#¿Un billar?
