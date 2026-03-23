@@ -121,3 +121,15 @@ gpg --import llavepublicade_francisco.asc
 #gpg: key 48E9515BBA7B9AE8: public key "Francis Acuña (Hola) <panchode05@gmail.com>" imported
 #gpg: Total number processed: 1
 #gpg:               imported: 1
+
+#Listo las llaves de mi amigo y mias.
+gpg --list-keys
+#pub   rsa4096 2026-03-18 [SC] [expires: 2027-03-18]
+#      9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9
+#uid           [ultimate] Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>
+#sub   rsa4096 2026-03-18 [E] [expires: 2027-03-18]
+
+#pub   rsa4096 2026-03-23 [SC] [expires: 2027-03-23]
+#      867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8
+#uid           [ unknown] Francis Acuña (Hola) <panchode05@gmail.com>
+#sub   rsa4096 2026-03-23 [E] [expires: 2027-03-23]
