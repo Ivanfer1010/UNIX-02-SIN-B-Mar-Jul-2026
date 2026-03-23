@@ -133,3 +133,6 @@ gpg --list-keys
 #      867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8
 #uid           [ unknown] Francis Acuña (Hola) <panchode05@gmail.com>
 #sub   rsa4096 2026-03-23 [E] [expires: 2027-03-23]
+
+#Guardar un mensaje para mi compa
+echo "Hola Francisco David" > doc_no_cifrdo.txt
