@@ -154,3 +154,6 @@ gpg --output doc_cifrado.txt --encrypt --recipient 867CE0EFFC6D4FD2A925323848E95
 #Desifra el mensaje encriptado
 gpg --decrypt Ivan.txt
 #¿Un billar?
+
+#Este comando firma el documento 
+gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
