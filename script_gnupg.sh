@@ -116,3 +116,5 @@ gpg --armor --export-secret-keys 35513F1E4D3380C9
 #=7xiF
 #-----END PGP PRIVATE KEY BLOCK-----
 
+#Importa la llave publica de mi compa
+gpg --import llavepublicade_francisco.asc
