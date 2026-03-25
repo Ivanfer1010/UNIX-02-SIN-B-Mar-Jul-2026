@@ -250,3 +250,8 @@ gpg --verify mensaje_cifrado.txt.asc
 #gpg: next trustdb check due at 2027-03-18
 #gpg: Good signature from "Francis Acuña (Hola) <panchode05@gmail.com>" [full]
 #gpg: WARNING: not a detached signature; file 'mensaje_cifrado.txt' was NOT verified!
+
+#Este comando cifra y firma a la vez
+gpg --output doc_cifrado_firmado_francis.txt --encrypt --sign --recipient 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8 doc_no_cifrado.txt
+
+
