@@ -173,3 +173,42 @@ gpg --verify mensaje_cifrado.txt.asc
 #gpg: WARNING: not a detached signature; file 'mensaje_cifrado.txt' was NOT verified!
 
 gpg --edit-key 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8
+#gpg (GnuPG) 2.4.4; Copyright (C) 2024 g10 Code GmbH
+#This is free software: you are free to change and redistribute it.
+#There is NO WARRANTY, to the extent permitted by law.
+
+#pub  rsa4096/48E9515BBA7B9AE8
+#     created: 2026-03-23  expires: 2027-03-23  usage: SC  
+#     trust: unknown       validity: unknown
+#sub  rsa4096/545A4A9128BC82C3
+#     created: 2026-03-23  expires: 2027-03-23  usage: E   
+#[ unknown] (1). Francis Acuña (Hola) <panchode05@gmail.com>
+
+#gpg> trust
+#pub  rsa4096/48E9515BBA7B9AE8
+#     created: 2026-03-23  expires: 2027-03-23  usage: SC  
+#     trust: unknown       validity: unknown
+#sub  rsa4096/545A4A9128BC82C3
+#     created: 2026-03-23  expires: 2027-03-23  usage: E   
+#[ unknown] (1). Francis Acuña (Hola) <panchode05@gmail.com>
+
+#Please decide how far you trust this user to correctly verify other users' keys
+#(by looking at passports, checking fingerprints from different sources, etc.)
+
+#  1 = I don't know or won't say
+#  2 = I do NOT trust
+#  3 = I trust marginally
+#  4 = I trust fully
+#  5 = I trust ultimately
+#  m = back to the main menu
+
+#Your decision? 4
+
+#pub  rsa4096/48E9515BBA7B9AE8
+#     created: 2026-03-23  expires: 2027-03-23  usage: SC  
+#     trust: full          validity: unknown
+#sub  rsa4096/545A4A9128BC82C3
+#     created: 2026-03-23  expires: 2027-03-23  usage: E   
+#[ unknown] (1). Francis Acuña (Hola) <panchode05@gmail.com>
+#Please note that the shown key validity is not necessarily correct
+#unless you restart the program.
