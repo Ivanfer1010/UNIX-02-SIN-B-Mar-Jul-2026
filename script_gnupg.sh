@@ -212,3 +212,41 @@ gpg --edit-key 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8
 #[ unknown] (1). Francis Acuña (Hola) <panchode05@gmail.com>
 #Please note that the shown key validity is not necessarily correct
 #unless you restart the program.
+
+gpg --sign-key 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8
+#gpg: checking the trustdb
+#gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+#gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+#gpg: next trustdb check due at 2027-03-18
+#pub  rsa4096/48E9515BBA7B9AE8
+#     created: 2026-03-23  expires: 2027-03-23  usage: SC  
+#     trust: full          validity: unknown
+#sub  rsa4096/545A4A9128BC82C3
+#     created: 2026-03-23  expires: 2027-03-23  usage: E   
+#[ unknown] (1). Francis Acuña (Hola) <panchode05@gmail.com>
+
+
+#pub  rsa4096/48E9515BBA7B9AE8
+#     created: 2026-03-23  expires: 2027-03-23  usage: SC  
+#     trust: full          validity: unknown
+ #Primary key fingerprint: 867C E0EF FC6D 4FD2 A925  3238 48E9 515B BA7B 9AE8
+
+ #    Francis Acuña (Hola) <panchode05@gmail.com>
+
+#This key is due to expire on 2027-03-23.
+#Are you sure that you want to sign this key with your
+#key "Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>" (35513F1E4D3380C9)
+
+#Really sign? (y/N) y
+
+#Verificamos el nivel de confidencialidad asignado
+gpg --verify mensaje_cifrado.txt.asc
+#gpg: Signature made Wed Mar 25 16:02:46 2026 UTC
+#gpg:                using RSA key 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8
+#gpg: checking the trustdb
+#gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+#gpg: depth: 0  valid:   1  signed:   1  trust: 0-, 0q, 0n, 0m, 0f, 1u
+#gpg: depth: 1  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 1f, 0u
+#gpg: next trustdb check due at 2027-03-18
+#gpg: Good signature from "Francis Acuña (Hola) <panchode05@gmail.com>" [full]
+#gpg: WARNING: not a detached signature; file 'mensaje_cifrado.txt' was NOT verified!
