@@ -160,3 +160,16 @@ gpg --clearsign Ivan.txt
 gpg --output Ivan.txt
 
 gpg --sign Ivan.txt.asc
+
+gpg --detach-sign Ivan.txt.asc.gpg
+
+gpg --verify mensaje_cifrado.txt.asc
+#gpg: Signature made Wed Mar 25 16:02:46 2026 UTC
+#gpg:                using RSA key 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8
+#gpg: Good signature from "Francis Acuña (Hola) <panchode05@gmail.com>" [unknown]
+#gpg: WARNING: This key is not certified with a trusted signature!
+#gpg:          There is no indication that the signature belongs to the owner.
+#Primary key fingerprint: 867C E0EF FC6D 4FD2 A925  3238 48E9 515B BA7B 9AE8
+#gpg: WARNING: not a detached signature; file 'mensaje_cifrado.txt' was NOT verified!
+
+gpg --edit-key 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8
