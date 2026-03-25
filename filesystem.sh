@@ -1,0 +1,1 @@
+pwd #Print working direction, muestra el directotrio en el que estamos trabajando.
