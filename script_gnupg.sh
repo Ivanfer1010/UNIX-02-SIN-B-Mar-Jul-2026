@@ -155,14 +155,17 @@ gpg --output doc_cifrado.txt --encrypt --recipient 867CE0EFFC6D4FD2A925323848E95
 gpg --decrypt Ivan.txt
 #¿Un billar?
 
+#Genera una firma
 gpg --clearsign Ivan.txt
 
+#Gnera un archivo con el nombre dado
 gpg --output Ivan.txt
 
+#Firma el documento pedido
 gpg --sign Ivan.txt.asc
-
+ #Genera una firma aparte
 gpg --detach-sign Ivan.txt.asc.gpg
-
+#Verifica el mensaje cifrado
 gpg --verify mensaje_cifrado.txt.asc
 #gpg: Signature made Wed Mar 25 16:02:46 2026 UTC
 #gpg:                using RSA key 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8
@@ -254,4 +257,8 @@ gpg --verify mensaje_cifrado.txt.asc
 #Este comando cifra y firma a la vez
 gpg --output doc_cifrado_firmado_francis.txt --encrypt --sign --recipient 867CE0EFFC6D4FD2A925323848E9515BBA7B9AE8 doc_no_cifrado.txt
 
+#Descifra y valida la firma
+gpg --decrypt doc_cifrado_firmado_ivan.txt
 
+#verificamos el contenido del archivo
+cat doc_cifrado_firmado_ivan.txt
