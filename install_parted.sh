@@ -8,3 +8,7 @@
 sudo parted -l && echo -e "\n" && lsblk -f && echo -e "\n---\n"
 #This command allows you to quickly and easily identify whether the operating system is using UEFI or BIOS  boot mode.
 [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
+#Create a file with the given name and add the text
+echo "esto es un archivo" > archivo.txt
+#Inspect in detail the internal properties of a archivo.txt
+archivo.txt
