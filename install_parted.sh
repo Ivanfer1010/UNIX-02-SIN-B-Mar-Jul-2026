@@ -5,3 +5,4 @@
 #Install GNU Parted, a command-line tool for managing disk partitions in Linux.
  sudo apt install parted
 
+sudo parted -l && echo -e "\n" && lsblk -f && echo -e "\n---\n"
