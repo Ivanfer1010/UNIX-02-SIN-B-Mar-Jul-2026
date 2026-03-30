@@ -11,4 +11,4 @@ sudo parted -l && echo -e "\n" && lsblk -f && echo -e "\n---\n"
 #Create a file with the given name and add the text
 echo "esto es un archivo" > archivo.txt
 #Inspect in detail the internal properties of a archivo.txt
-archivo.txt
+stat archivo.txt
