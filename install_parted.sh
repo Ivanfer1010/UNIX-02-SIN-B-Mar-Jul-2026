@@ -6,4 +6,5 @@
  sudo apt install parted
 #It displays complete information about disks and partitions, with a cleaner and easier-to-read format.
 sudo parted -l && echo -e "\n" && lsblk -f && echo -e "\n---\n"
-
+#This command allows you to quickly and easily identify whether the operating system is using UEFI or BIOS  boot mode.
+[ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
