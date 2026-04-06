@@ -17,3 +17,9 @@ ls -lai
 #918515 drwxr-x--- 1 codespace codespace 4096 Apr  6 12:37 ..
 #Displays detailed information about the current  directory like the birth of the file, acces, ,modify , inode, ect
 stat .
+#Creates various directories, including intermediate folders if they dont exist
+mkdir -p /tmp/prueba/sub1 /tmp/prueba/sub2
+#Displays detailed informaton about the current directory
+stat /tmp/prueba
+#Shows the manual of mkdir we can use this coomand for other files.
+man mkdir
