@@ -6,3 +6,9 @@ cd /home/codespace
 cd ~
 #Changes the directory to home
 cd $HOME
+#Creation of a route with the name "proyecto"
+mkdir proyecto
+#Changes the direcotry to the route "proyecto"
+cd proyecto/
+#List all files and folders in the directory
+ls -lai
