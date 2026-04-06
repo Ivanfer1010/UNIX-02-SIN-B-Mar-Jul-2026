@@ -12,3 +12,6 @@ mkdir proyecto
 cd proyecto/
 #List all files and folders in the directory
 ls -lai
+#total 12
+#925547 drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:37 .
+#918515 drwxr-x--- 1 codespace codespace 4096 Apr  6 12:37 ..
