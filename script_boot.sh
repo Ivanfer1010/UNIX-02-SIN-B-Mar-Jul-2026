@@ -23,3 +23,22 @@ mkdir -p /tmp/prueba/sub1 /tmp/prueba/sub2
 stat /tmp/prueba
 #Shows the manual of mkdir we can use this coomand for other files.
 man mkdir
+#Print working directory Where I am
+pwd
+#What is the user I am logged in with
+whoami
+#show details of the file
+ls
+#shows details of the file in large format
+ls- l
+#List all files and folders, including hidden ones
+ls -la
+#View files with easy-to-understand details and sizes
+ls -lh
+#Lists files and folders in the current directory with detailed information, sorted by modification date
+ls -lt
+#Lists the files and folders that are in the root of the system.
+ls /
+#Search the directories of the system only shows the first 20 lines
+ls /etc | head -20
+ls /dev | head -20
