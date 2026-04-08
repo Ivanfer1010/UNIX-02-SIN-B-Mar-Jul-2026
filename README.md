@@ -36,3 +36,11 @@ cd ..
 git clone --depth 1 https://git.busybox.net/busybox
 #Go into the busybox folder
 cd busybox
+#Configure busybox
+make menuconfig
+#Compilation with 2 cores
+make -j 2
+#Create a folder named initramfs inside /boot-files/, using administrator privileges.
+sudo mkdir /boot-files/initramfs
+#Run the BusyBox installation, copying its files to the directory specified in CONFIG_PREFIX.
+sudo make CONFIG_PREFIX=/boot-files-initramfs install
