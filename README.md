@@ -44,3 +44,7 @@ make -j 2
 sudo mkdir /boot-files/initramfs
 #Run the BusyBox installation, copying its files to the directory specified in CONFIG_PREFIX.
 sudo make CONFIG_PREFIX=/boot-files-initramfs install
+#Change to the /boot-files/initramfs directory.
+cd /boot-files/initramfs
+#Create the init file
+sudo vi init
