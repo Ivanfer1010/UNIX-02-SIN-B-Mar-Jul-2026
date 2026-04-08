@@ -48,3 +48,10 @@ sudo make CONFIG_PREFIX=/boot-files-initramfs install
 cd /boot-files/initramfs
 #Create the init file
 sudo vi init
+#Type this content in the init file
+#!/bin/sh
+/bin/sh
+#delete  the file named linuxrc in the current directory
+sudo rm linuxrc
+#Give execution permissions to the file named init, using administrator permissions
+sudo chmod +x init
