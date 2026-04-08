@@ -22,4 +22,7 @@ sudo apt install -y git vim make gcc libncurses-dev flex bison bc cpio libelf-de
 
 git clone --depth 1 https://github.com/torvalds/linux.git
 cd linux 
+#Configure the options of compilation
 make menuconfig
+#Adjust the number of cores that I want to use
+make -j 2
