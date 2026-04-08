@@ -26,3 +26,13 @@ cd linux
 make menuconfig
 #Adjust the number of cores that I want to use
 make -j 2
+#Send the kernel image to a working directory
+sudo mkdir /boot-files
+#Copy the bzImage file (the Linux kernel) from arch/x86/boot/ to the /boot-files/ folder, using administrator privileges
+sudo cp arch/x86/boot/bzImage /boot-files/
+#Go to parent directory
+cd ..
+#Clone the BusyBox repository from the internet, but only download the latest version
+git clone --depth 1 https://git.busybox.net/busybox
+#Go into the busybox folder
+cd busybox
