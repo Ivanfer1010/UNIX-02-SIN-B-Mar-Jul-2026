@@ -56,5 +56,5 @@ sudo rm linuxrc
 #Give execution permissions to the file named init, using administrator permissions
 sudo chmod +x init
 #This command creates an initramfs file (init.cpio) from all the contents of the current directory
-sudo find . | cpio -0 -H newc > ../init.cpio
+sudo find . | cpio -o -H newc > ../init.cpio
 cd ..
