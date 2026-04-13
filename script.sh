@@ -13,5 +13,11 @@ ls -lah
 mkdir -- -rf
 #Create a directory named rf
 rm -rf
-rm -- -rf
+rmdir -- -rf
 #It is used to recursively and forcibly delete files and directories in this case rf.
+git clone --depth 1 https://github.com/torvalds/linux.git
+
+ls --help
+#Shows a summarized manual
+man ls
+#Show the entire manual
