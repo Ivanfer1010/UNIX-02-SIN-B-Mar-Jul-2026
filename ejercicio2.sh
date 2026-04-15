@@ -5,6 +5,9 @@ chmod 600 prueba.txt
 ls -l prueba.txt
 #Displays detailed permissions and attributes of prueba.txt
 chmod 755 prueba.txt
+#7 (Owner): Can read, write and execute ($4+2+1$).
+#5 (Group): Can only read and execute ($4+1$).
+#5 (Other): Can only read and execute ($4+1$).
 #Change the permissions
 ls -l prueba.txt
 #-rwxr-xr-x 1 codespace codespace 0 Apr 15 13:34 prueba.txt
