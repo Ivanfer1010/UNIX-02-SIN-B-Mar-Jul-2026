@@ -37,3 +37,7 @@ chmod u+rw,go-rwx privado
 sudo echo "hola" > /etc/archivo_protegido
 #bash: /etc/archivo_protegido: Permission denied
 #This command doesnt work because sudo is only working in echo.
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
+#Write "hola" to a protected file using sudo tee to bypass system write restrictions, hiding the output in the terminal with /dev/null to make the process silent.
+echo "hola" | sudo tee /etc/archivo_protegido 
+#Write "hola" to a protected file using sudo tee to have write permissions, displaying the text on screen at the same time.
