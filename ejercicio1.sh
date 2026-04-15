@@ -22,3 +22,10 @@ ls -l hola.sh
 #@Ivanfer1010 ➜ /workspaces/UNIX-02-SIN-B-Mar-Jul-2026 (boot_exploration) $ ./test.sh
 #bash: ./test.sh: cannot execute: required file not found
 ls /etc
+#List the contents of the /etc directory
+touch /etc/prueba.txt
+#Try creating an empty file called test.txt in the /etc folder, but we nedd to use sudo before
+mkdir ~/mi-carpeta
+#Create a new directory called mi-carpeta inside my home folder.
+apt install cowsay
+Try installing the Cowsay program but we need to write sudo before apt.
