@@ -47,3 +47,7 @@ sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
 #sudo execute as a root, sh open a shell and run with administrator privileges to add the text "chao" to the end of a protected system file, after that we verifiy with the command cat.
 sudo su -
 #Change the user to root and with exit we can logout from that.
+echo "$HOME"
+#Displays the full path of the current user's home directory.
+echo '$HOME'
+#With '' print the text in this case $HOME
