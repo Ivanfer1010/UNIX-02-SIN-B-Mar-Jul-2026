@@ -34,3 +34,6 @@ chmod 0-r secreto.txt
 #Remove lecture to others
 chmod u+rw,go-rwx privado
 #Owner read/write, no one else can do anything.
+sudo echo "hola" > /etc/archivo_protegido
+#bash: /etc/archivo_protegido: Permission denied
+#This command doesnt work because sudo is only working in echo.
