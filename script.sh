@@ -41,3 +41,9 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 #Write "hola" to a protected file using sudo tee to bypass system write restrictions, hiding the output in the terminal with /dev/null to make the process silent.
 echo "hola" | sudo tee /etc/archivo_protegido 
 #Write "hola" to a protected file using sudo tee to have write permissions, displaying the text on screen at the same time.
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
+#hola
+#chao
+#sudo execute as a root, sh open a shell and run with administrator privileges to add the text "chao" to the end of a protected system file, after that we verifiy with the command cat.
+sudo su -
+#Change the user to root and with exit we can logout from that.
