@@ -11,3 +11,14 @@ cat hola.sh
 #bash: ./hola.sh: Permission denied
 #Doesnt work becasuse we dont have enough permissions
 ls -l hola.sh
+#-rw-rw-rw- 1 codespace codespace 44 Apr 15 13:03 hola.sh
+#Shows the permissions, owner, and size of the file hola.sh
+chmod +x hola.sh
+#Give permissions
+ls -l hola.sh
+#Verifiy the new permissions
+#-rwxrwxrwx 1 codespace codespace 44 Apr 15 13:03 hola.sh
+./hola.sh
+#@Ivanfer1010 ➜ /workspaces/UNIX-02-SIN-B-Mar-Jul-2026 (boot_exploration) $ ./test.sh
+#bash: ./test.sh: cannot execute: required file not found
+ls /etc
