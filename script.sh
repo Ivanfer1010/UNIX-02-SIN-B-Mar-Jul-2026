@@ -163,3 +163,26 @@ sudo chown luna mi_archivo
 ls -l mi_archivo
 #List the prmissions of the file mi_archivo
 #-rw-r--r-- 1 luna codespace 5 Apr 27 13:12 mi_archivo
+groups
+#It displays the groups to which the current user belongs in the system.
+sudo groupadd grupo_test
+#Create a new group called grupo_test in the system.
+groups
+#It displays the groups to which the user currently logged into the system belongs.
+touch comun
+#Create a file named comun
+ls -l comun
+#List the permisions
+#-rw-r--r-- 1 codespace codespace 0 Apr 27 13:32 comun
+sudo usermod -a -G grupo_test luna
+#Add the luna user to the test group without removing it from its other existing groups.
+sudo chgrp grupo_test comun
+#Change the group owner of the common file or directory to belong to the grupo_test.
+ls -l comun
+#List the permissions
+#-rw-r--r-- 1 codespace grupo_test 0 Apr 27 13:32 comun
+sudo chown luna:grupo_test mi_archivo
+#Change the owner of the file archivo to the user luna and its group to the grupo_test.
+ls -l mi_archivo
+#List the permissions of the file mi_archivo
+#-rw-r--r-- 1 luna grupo_test 5 Apr 27 13:12 mi_archivo
