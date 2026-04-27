@@ -51,3 +51,115 @@ echo "$HOME"
 #Displays the full path of the current user's home directory.
 echo '$HOME'
 #With '' print the text in this case $HOME
+umask
+#displays the mask system's default 
+touch archivo1
+#Creates an empty file with that name if it does not exist; if it already exists, does not modify its contents
+mkdir directorio1
+#Create a new directory called directorio1 in the current location
+ls -l
+#List the permissions
+#total 64
+#-rw-rw-rw-  1 codespace root      34523 Apr 13 12:15 LICENSE
+#-rw-rw-rw-  1 codespace root         70 Apr 13 12:15 README.md
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:32 archivo1
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:32 directorio1
+#-rw-rw-rw-  1 codespace codespace  1186 Apr 15 13:25 ejercicio1.sh
+#-rw-rw-rw-  1 codespace codespace   519 Apr 15 13:43 ejercicio2.sh
+#-rwxrwxrwx  1 codespace codespace    44 Apr 15 13:03 hola.sh
+#-rwxr-xr-x  1 codespace codespace     0 Apr 15 13:34 prueba.txt
+#-rw-rw-rw-  1 codespace codespace  2271 Apr 27 12:31 script.sh
+#-rwxrwxrwx  1 codespace codespace    43 Apr 15 13:17 test.sh
+umask 027
+#Change the permission of umask
+touch archivo2
+#Creates an empty file with that name if it does not exist; if it already exists, does not modify its contents
+mkdir directorio2
+#Create a new directory called directorio1 in the current location
+ls -l
+#List the permissions
+# ls -l
+#total 68
+#-rw-rw-rw-  1 codespace root      34523 Apr 13 12:15 LICENSE
+#-rw-rw-rw-  1 codespace root         70 Apr 13 12:15 README.md
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:32 archivo1
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:36 archivo2
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:32 directorio1
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:37 directorio2
+#-rw-rw-rw-  1 codespace codespace  1186 Apr 15 13:25 ejercicio1.sh
+#-rw-rw-rw-  1 codespace codespace   519 Apr 15 13:43 ejercicio2.sh
+#-rwxrwxrwx  1 codespace codespace    44 Apr 15 13:03 hola.sh
+#-rwxr-xr-x  1 codespace codespace     0 Apr 15 13:34 prueba.txt
+#-rw-rw-rw-  1 codespace codespace  2750 Apr 27 12:37 script.sh
+#-rwxrwxrwx  1 codespace codespace    43 Apr 15 13:17 test.sh
+umask 077
+#A permission mask that restricts the default permissions of new files and directories, so that only the owner will have full access.
+touch secreto.txt
+#Create a file named secreto.txt
+mkdir privado
+#Create a directory named privado
+ls -l
+#List permissions
+#total 72
+#-rw-rw-rw-  1 codespace root      34523 Apr 13 12:15 LICENSE
+#-rw-rw-rw-  1 codespace root         70 Apr 13 12:15 README.md
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:32 archivo1
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:36 archivo2
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:32 directorio1
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:37 directorio2
+#-rw-rw-rw-  1 codespace codespace  1186 Apr 15 13:25 ejercicio1.sh
+#-rw-rw-rw-  1 codespace codespace   519 Apr 15 13:43 ejercicio2.sh
+#-rwxrwxrwx  1 codespace codespace    44 Apr 15 13:03 hola.sh
+#drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:41 privado
+#-rwxr-xr-x  1 codespace codespace     0 Apr 15 13:34 prueba.txt
+#-rw-rw-rw-  1 codespace codespace  3808 Apr 27 12:41 script.sh
+#-rw-rw-rw-  1 codespace codespace     0 Apr 27 12:41 secreto.txt
+#-rwxrwxrwx  1 codespace codespace    43 Apr 15 13:17 test.sh
+sudo apt-get update
+#Update the list of available packages from the repositories configured on the system.
+sudo apt-get install acl
+#Install the acl (Access Control Lists) package
+sudo chown -R $(whoami) . 
+#Recursively changes the owner of all files and folders in the current directory to belong to the user running the command.
+sudo setfacl -bnR .
+#Recursively removes (-R) all extended access control lists (ACLs) on the current directory (.), leaving only basic system permissions.
+umask 077
+#Changes the mask to 077
+touch se
+#Create a file named se
+mkdir pri
+#Create a directory named pri
+ls -l
+#total 80
+#-rw-rw-rw- 1 codespace root      34523 Apr 13 12:15 LICENSE
+#-rw-rw-rw- 1 codespace root         70 Apr 13 12:15 README.md
+#-rw-rw-rw- 1 codespace codespace     0 Apr 27 12:32 archivo1
+#-rw-rw-rw- 1 codespace codespace     0 Apr 27 12:36 archivo2
+#drwxrwxrwx 2 codespace codespace  4096 Apr 27 12:32 directorio1
+#drwxrwxrwx 2 codespace codespace  4096 Apr 27 12:37 directorio2
+#-rw-rw-rw- 1 codespace codespace  1186 Apr 15 13:25 ejercicio1.sh
+#-rw-rw-rw- 1 codespace codespace   519 Apr 15 13:43 ejercicio2.sh
+#-rwxrwxrwx 1 codespace codespace    44 Apr 15 13:03 hola.sh
+#drwx------ 2 codespace codespace  4096 Apr 27 12:52 pri
+#drwxrwxrwx 2 codespace codespace  4096 Apr 27 12:41 privado
+#-rwxr-xr-x 1 codespace codespace     0 Apr 15 13:34 prueba.txt
+#-rw-rw-rw- 1 codespace codespace  5374 Apr 27 12:46 script.sh
+#-rw------- 1 codespace codespace     0 Apr 27 12:52 se
+#-rw-rw-rw- 1 codespace codespace     0 Apr 27 12:41 secreto.txt
+#-rwxrwxrwx 1 codespace codespace    43 Apr 15 13:17 test.sh
+umask 022
+#Return to original permissions
+whoami
+#Displays the name of the currently logged-in user.
+echo "Hola" > mi_archivo
+#Write the text “Hola” inside the file mi_archivo, creating it if it does not exist or overwriting its contents if it already exists.
+ls -l mi_archivo
+#Shows detailed information of mi_archivo like permissions.
+#-rw-r--r-- 1 codespace codespace 5 Apr 27 13:12 mi_archivo
+sudo useradd -m -s /usr/bin/zsh luna
+#Create a new user named luna, generating its home directory (-m) and assigning /usr/bin/zsh as its default shell.
+sudo chown luna mi_archivo
+#Change the owner of the file mi_archivo to the user luna.
+ls -l mi_archivo
+#List the prmissions of the file mi_archivo
+#-rw-r--r-- 1 luna codespace 5 Apr 27 13:12 mi_archivo
