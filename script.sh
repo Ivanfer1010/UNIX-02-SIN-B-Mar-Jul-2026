@@ -186,3 +186,19 @@ sudo chown luna:grupo_test mi_archivo
 ls -l mi_archivo
 #List the permissions of the file mi_archivo
 #-rw-r--r-- 1 luna grupo_test 5 Apr 27 13:12 mi_archivo
+mkdir -p proyecto/sub
+#Create the project folder and within it the subfolder sub, generating the entire necessary directory structure
+touch proyecto/readme proyecto/sub/datos
+#Create two empty files: readme inside the project folder and data inside proyecto/sub
+sudo chown -R luna:grupo_test proyecto
+#Recursively change the owner and group of the project folder and all its contents, assigning the user luna as owner and the group grupo_test as owner group.
+ls -lR proyecto
+#Displays in detailed format (-l) and recursively (-EN) all the contents of the proyecto directory.
+#proyecto:
+#total 4
+#-rw-r--r-- 1 luna grupo_test    0 Apr 27 13:57 readme
+#drwxr-xr-x 2 luna grupo_test 4096 Apr 27 13:57 sub
+
+#proyecto/sub:
+#total 0
+#-rw-r--r-- 1 luna grupo_test 0 Apr 27 13:57 datos
