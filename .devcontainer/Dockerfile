@@ -224,7 +224,7 @@ RUN chsh -s /usr/bin/zsh root
 # Prompt institucional para los y las estudiantes del curso
 RUN cat >> /root/.zshrc <<'EOF'
 #Valida si un comando fue ejcutado correctamente
-PROMPT='%F{cyan}[Ivan-Gualotuña]%f %F{yellow}%1~%f %(?.%F{green}✔️.%F{red}✘ %?)%f %#'
+PROMPT='%F{cyan}[Ivan-Gualotuña]%f %F{yellow}%1~%f %(?.%F{green}✔️.%F{red}✘ %?)%f %# '
 EOF
 
 CMD ["/bin/zsh"]
