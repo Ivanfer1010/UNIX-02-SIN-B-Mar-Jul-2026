@@ -149,3 +149,28 @@ cat
 head
 #It is used to display the last lines of a file.
 tail
+
+#Copy files
+cp
+#cp /etc/password. Copy the /etc/passwd file to the current directory.
+cp /etc/passwd .
+#hello.sh  java  nvm  passwd
+
+#Copy and convert data at a low level.
+dd
+#Create a 50 MB file full of zeros in /tmp called swapex
+dd if=/dev/zero of=/tmp/swapex bs=1M count=50 
+#If
+#Input File: The input file to be read.
+#of
+#Output File: The output file to be written.
+#bs
+#Block Size: The block size to use. By default, the value is given in bytes. Use the following suffixes to specify other units: K, M, G, and T for kilobytes, megabytes, gigabytes, and terabytes, respectively.
+#count
+#Count: The number of blocks to be read from the input file.
+#50+0 records in
+#50+0 records out
+#52428800 bytes (52 MB, 50 MiB) copied, 0.0533094 s, 983 MB/s
+
+#Copy all the contents of the device /dev/sda to /dev/sdb.
+dd if=/dev/sda of=/dev/sdb
