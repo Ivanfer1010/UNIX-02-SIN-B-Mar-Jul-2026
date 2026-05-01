@@ -129,3 +129,14 @@ sudo -u
 #Run the sl program with administrator privileges.
 sudo sl
 
+#Create hello.sh
+mkdir hello.sh
+
+#It displays detailed information about the hello.sh file.
+ls hello.sh
+#Change file and folder permissions.
+chmod
+#Adds execute permission to the user who owns the hello.sh file.
+chmod u+x hello.sh
+#Run the hello.sh file located in the current directory.
+./hello.sh      
