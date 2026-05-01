@@ -140,3 +140,12 @@ chmod
 chmod u+x hello.sh
 #Run the hello.sh file located in the current directory.
 ./hello.sh      
+
+#Change the owner of the hello.sh file to the root user.
+sudo chown root hello.sh 
+#It is mainly used to display the contents of text files in the terminal.
+cat
+#It is used to display the first lines of a file.
+head
+#It is used to display the last lines of a file.
+tail
