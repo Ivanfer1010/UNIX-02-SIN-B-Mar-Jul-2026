@@ -36,4 +36,20 @@ aptitude -v moo
 aptitude -v -v moo
 aptitude -vv moo
 
+#Print working directory
+pwd
+
+#Change directory
+cd
+#Use the `cd`  command to navigate to the system's root directory.
+cd /
+#Return
+ cd /home/codespace
+ #/home/codespace
+
+#Enter a folder called java within the current directory.
+ cd java
+#go to the current user's personal directory.
+cd ~
+
 
