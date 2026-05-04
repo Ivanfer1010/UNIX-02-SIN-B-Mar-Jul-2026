@@ -18,3 +18,7 @@ cat /etc/group | grep root
 #Filter the /etc/group file to show only the information for the root group.
 cat /etc/gshadow
 #It displays the contents of the /etc/gshadow file, which stores secure information about  system groups, including group passwords.
+mkdir ~/proyecto_unix/
+#Create a new directory called proyecto_unix
+ls -la ~/proyecto_unix/
+#List all files from the proyecto_unix directory in the user home directory
