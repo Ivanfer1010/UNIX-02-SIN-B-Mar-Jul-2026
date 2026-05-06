@@ -13,7 +13,7 @@ id -u
 id -g
 #Shws the main group ID
 id -G 
-#Shoes all the ID groups
+#Shows all the ID groups
 cat /etc/group | grep root
 #Filter the /etc/group file to show only the information for the root group.
 cat /etc/gshadow
@@ -22,3 +22,9 @@ mkdir ~/proyecto_unix/
 #Create a new directory called proyecto_unix
 ls -la ~/proyecto_unix/
 #List all files from the proyecto_unix directory in the user home directory
+#Add group [options] group_name
+#Create a simple group
+sudo groupadd desarrolladores
+sudo groupadd -g 2000 operaciones #Specific GID
+#System group (GID < 1000)
+sudo groupadd --system servicios_web
