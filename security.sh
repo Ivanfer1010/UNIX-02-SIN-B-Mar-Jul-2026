@@ -33,3 +33,19 @@ grep "desarrolladores\|operaciones\|servicios_web" /etc/group
 grep -E "desarrolladores|operaciones|servicios_web" /etc/group
 #See main options
 groupadd --help
+#View the GID range in the system
+grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
+#System groups have a minimum GID lower than the user
+#In Ubuntu, typically:
+#SYS_GID_MIN = 100
+#SYS_GID_MAX = 999
+#GID_MIN = 1000
+#GID_MAX = 60000
+#addgroup [options] group_name
+#Create groups with addgroup
+sudo addgroup diseno
+sudo addgroup --gid 2100 marketing
+sudo addgroup --system cache_web
+#Verify
+grep "diseno\|marketing\|cache_web" /etc/group
+
