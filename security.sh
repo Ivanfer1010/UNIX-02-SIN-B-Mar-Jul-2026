@@ -48,4 +48,28 @@ sudo addgroup --gid 2100 marketing
 sudo addgroup --system cache_web
 #Verify
 grep "diseno\|marketing\|cache_web" /etc/group
+#See which groups the current user belongs to
+groups
+id
+#Add a user to a group with usermod(low level)
+sudo usermod -aG desarrolladores $USER
+sudo usermod -aG diseno $USER
 
+#solution: Change user to root
+sudo usermod -aG desarrolladores root
+usermod -aG diseno root
+#Check for changes in /etc/group
+grep "desarrolladores\|diseno" /etc/group
+#Add user to group with adduser (high level, Debian)
+sudo adduser root marketing
+#View current status
+id root
+grep root /etc/group
+#Create a temporary group for the demo.
+sudo groupadd grupo_temporal
+sudo usermod -aG grupo_temporal root
+id root  #Have temporal group
+#Now the error: usermod sin -a
+sudo usermod -G desarrolladores root
+#This removes all child groups except developers.
+id root #lost all the other groups
