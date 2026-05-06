@@ -73,3 +73,6 @@ id root  #Have temporal group
 sudo usermod -G desarrolladores root
 #This removes all child groups except developers.
 id root #lost all the other groups
+#Restore
+sudo usermod -aG diseno,marketing,grupo_temporal root
+id root  #Restores
