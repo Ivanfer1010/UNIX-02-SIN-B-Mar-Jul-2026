@@ -42,3 +42,8 @@ echo "PID del shell actual: $$"
 newgrp desarrolladores
 echo "PID dentro de newgrp: $$"
 #The PID it is different  - It is a child process
+
+#Create a group with password
+sudo groupadd grupo_restringido
+sudo gpasswd grupo_restringido
+#The systems ask to you a password for the group
