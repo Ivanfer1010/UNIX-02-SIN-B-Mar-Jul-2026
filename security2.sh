@@ -20,5 +20,10 @@ newgrp desarrolladores
 #Verify that the active group changes
 id -gn
 echo "Nuevo grupo activo: $(id -gn)"
-
-
+#Create a file inside of subshell
+touch ~/dentro_de_newgrp.txt
+ls -la ~/dentro_de_newgrp.txt
+#The group is desarolladores now
+#Create a directory
+mkdir -p ~/proyecto_dev/src
+ls -la ~/
