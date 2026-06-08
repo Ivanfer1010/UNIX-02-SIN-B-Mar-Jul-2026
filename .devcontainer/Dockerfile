@@ -307,3 +307,8 @@ EOF
 
 CMD ["/bin/zsh"]
 
+#section m: # CMD specifies the default execution command that runs automatically when the container instantiates at runtime. 
+# Unlike build-time RUN instructions which execute tasks to permanently modify and assemble static filesystem layers
+# CMD marks the persistent runtime entrypoint, launching an interactive Z shell session upon startup (BHB Ch. 3).
+
+
