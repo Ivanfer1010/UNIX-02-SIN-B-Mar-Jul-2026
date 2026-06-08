@@ -299,5 +299,11 @@ RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Ivan-Gualotuña]%f %F{yellow}%1~%f %(?.%F{green}✔️.%F{red}✘ %?)%f %# '
 EOF
 
+#section l: # A Here-Document (<<'EOF') is an advanced stream redirection method that injects multi-line text blocks directly into files without invoking interactive text editors (BHB Ch. 1)
+# Single quotes around the 'EOF' delimiter ensure literal string appending by preventing the build shell from expanding variables prematurely. 
+# The PROMPT configuration customizes the interactive Zsh workspace interface, integrating a personal identification signature, the current working directory path (%1~), 
+# and a dynamic ternary conditional check to instantly track and report execution exit status codes via visual metrics 
+
+
 CMD ["/bin/zsh"]
 
