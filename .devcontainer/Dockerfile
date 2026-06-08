@@ -192,20 +192,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     # === Cliente HTTP más legible que curl para aprender ===
     httpie \
     \
- # --- Después de instalar, activamos el idioma español ---
- # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
- # activar esa línea. Luego locale-gen compila los archivos de idioma.
- && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
- && locale-gen \
- \
- # --- Limpieza final: reducir el tamaño de la imagen ---
- # apt deja archivos de caché que ya no necesitamos después de instalar.
- # Borrarlos aquí (en el mismo RUN) hace la capa final más pequeña.
- # Si los borráramos en otro RUN, seguirían ocupando en la capa anterior.
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
 
- #Section e: # This consolidated RUN instruction handles both package index synchronization and software deployment to minimize image size (BHB Ch. 3).
+     #Section e: # This consolidated RUN instruction handles both package index synchronization and software deployment to minimize image size (BHB Ch. 3).
 #Single RUN Layer: Combining commands prevents Docker from saving bloated intermediate filesystem layers, keeping the final download footprint small.
 #Control Operators: The '&&' operator chains commands conditionally, ensuring the next step runs only if the previous one succeeds 
 #The trailing backslashes (\) act as line breaks to split long command strings for human readability.
@@ -219,6 +207,26 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #tor & proxychains4: Routing utilities used to obscure network traffic and chain proxy connections 
 #jq: A command-line processor dedicated to parsing, slicing, and filtering JSON data structures 
 #man-db: Core reference tool that reinstalls UNIX manual pages for offline documentation lookups (BHB Ch. 1).
+
+ # --- Después de instalar, activamos el idioma español ---
+ # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
+ # activar esa línea. Luego locale-gen compila los archivos de idioma.
+ && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
+ && locale-gen \
+
+ #Section f: # This step performs in-place stream editing using 'sed -i' to modify the localization configuration file without creating duplicates (BHB Ch. 2).
+# It uncomments and enables the Spanish UTF-8 layout string, which is then compiled by 'locale-gen' to ensure proper native character support across terminal tools.
+
+
+ \
+ # --- Limpieza final: reducir el tamaño de la imagen ---
+ # apt deja archivos de caché que ya no necesitamos después de instalar.
+ # Borrarlos aquí (en el mismo RUN) hace la capa final más pequeña.
+ # Si los borráramos en otro RUN, seguirían ocupando en la capa anterior.
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+
 
 
 
