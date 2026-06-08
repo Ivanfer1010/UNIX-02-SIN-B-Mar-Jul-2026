@@ -205,6 +205,23 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+ #Section e: # This consolidated RUN instruction handles both package index synchronization and software deployment to minimize image size (BHB Ch. 3).
+#Single RUN Layer: Combining commands prevents Docker from saving bloated intermediate filesystem layers, keeping the final download footprint small.
+#Control Operators: The '&&' operator chains commands conditionally, ensuring the next step runs only if the previous one succeeds 
+#The trailing backslashes (\) act as line breaks to split long command strings for human readability.
+#Action & Flags: 'apt-get update' syncs local lists with remote package repositories, while 'apt-get install' downloads the actual binaries 
+#The '-y' flag auto-approves installation prompts, and '--no-install-recommends' drops optional software additions to save space.
+#Key Utilities Reference
+#gawk, sed, grep: Powerful text parsers used to scan, filter, and edit data streams or log files (BHB Ch. 2)
+#shellcheck: A static analyzer used to debug code syntax and enforce best practices in shell scripting (BHB Ch. 1).
+#nmap & masscan: Reconnaissance utilities built for port scanning and mapping active network hosts 
+#tcpdump & tshark: Packet capture engines used to intercept and inspect live network traffic flows 
+#tor & proxychains4: Routing utilities used to obscure network traffic and chain proxy connections 
+#jq: A command-line processor dedicated to parsing, slicing, and filtering JSON data structures 
+#man-db: Core reference tool that reinstalls UNIX manual pages for offline documentation lookups (BHB Ch. 1).
+
+
+
 
 # ----------------------------------------------------------------------------
 # SHELL: qué intérprete usar en los siguientes RUN
