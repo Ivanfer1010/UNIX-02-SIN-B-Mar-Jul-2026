@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -x
 touch test && touch test123
 (ls; ps)
 ls; ps; whoami
@@ -25,4 +24,3 @@ cat << EOF
  by No Starch Press
 EOF
 
-set +x
