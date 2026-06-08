@@ -83,6 +83,11 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
+#Section d: # The pipeline operator (|) redirects the standard output (stdout) of the echo command into the standard input (stdin) of debconf-set-selections (BHB Ch. 1). 
+# This pre-seeds the configuration for the Wireshark package, answering its interactive prompt in advance to ensure a completely automated, noninteractive build without freezing (BHB Ch. 3).
+
+
+
 
 # ----------------------------------------------------------------------------
 # RUN: ejecutar comandos durante la construcción de la imagen
