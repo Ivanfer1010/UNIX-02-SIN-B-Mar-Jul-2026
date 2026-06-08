@@ -271,6 +271,13 @@ RUN git config --system --add safe.directory '*' \
  && git config --system pull.rebase false \
  && git lfs install --system
 
+#section j:# This section applies system-wide environment configurations for Git version control operations using the '--system' flag.
+#safe.directory '*': Relaxes directory ownership constraints to prevent execution blocks caused by UID mismatches between the host filesystem and the container's root environment.
+#init.defaultBranch main: Enforces 'main' as the default branch name during repository initialization to eliminate terminal warnings.
+#pull.rebase false: Configures standard merge behavior as the default integration strategy during repository pull actions.
+# git lfs install --system: Hooks the Large File Storage framework globally into the system to handle binary assets without disruption.
+
+
 # ----------------------------------------------------------------------------
 # CMD: comando que se ejecuta por defecto al arrancar el contenedor
 # ----------------------------------------------------------------------------
