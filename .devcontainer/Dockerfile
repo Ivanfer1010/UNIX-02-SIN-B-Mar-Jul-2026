@@ -66,6 +66,12 @@ ENV DEBIAN_FRONTEND=noninteractive \
     LC_ALL=es_ES.UTF-8 \
     TERM=xterm-256color
 
+#Section c:# ENV defines persistent environment variables that remain active throughout the image build and container runtime sessions (BHB Ch. 1). 
+#DEBIAN_FRONTEND=noninteractive: Suppresses interactive package installer dialogs to prevent headless build freezes . 
+#LANG & LC_ALL=es_ES.UTF-8: Sets the system localization and character encoding standard to properly render spanish character sets. 
+#TERM=xterm-256color: Informs terminal applications that a 256-color palette is supported, enabling full syntax highlighting.
+
+
 
 # ----------------------------------------------------------------------------
 # Pre-respuesta a una pregunta interactiva de Wireshark
