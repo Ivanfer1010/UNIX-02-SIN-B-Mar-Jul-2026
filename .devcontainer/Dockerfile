@@ -53,6 +53,14 @@ FROM kalilinux/kali-rolling:latest
 #
 # La barra invertida "\" al final de cada línea significa "esto continúa
 # en la línea siguiente". Solo es para legibilidad.
+
+#section b: docker images are constructed using a read-only layered architecture, where each instruction generates a new layer on the filesystem (BHB Ch. 3). 
+# To optimize performance, Docker caches these layers sequentially; if an instruction is modified, its cache and all subsequent layers are invalidated. 
+# Therefore, instruction order matters critically: heavy, static setup steps must be placed at the top to prevent slow, redundant rebuilds.
+
+
+
+
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=es_ES.UTF-8 \
     LC_ALL=es_ES.UTF-8 \
