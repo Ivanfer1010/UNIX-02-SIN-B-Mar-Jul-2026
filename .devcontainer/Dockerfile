@@ -226,6 +226,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+ #Section g: # Running 'apt-get clean' and removing temporary metadata directories using 'rm -rf' purges cached installer files (BHB Ch. 3).
+# Performing this operational cleanup within the exact same run block guarantees that transient files are deleted before Docker commits and freezes the filesystem layer, effectively preventing image bloat.
+
+
 
 
 
