@@ -25,6 +25,11 @@
 # Todo lo que instalemos más abajo se apila ENCIMA de esta base.
 FROM kalilinux/kali-rolling:latest
 
+#section a: # A base image represents the foundational, read-only operating system snapshot that serves as the initial filesystem blueprint for our container (BHB Ch. 3) . 
+# We explicitly choose Kali Linux because it is an industry-standard distribution pre-configured with advanced network auditing libraries, 
+# saving us from manually compiling essential UNIX utilities from scratch.
+
+
 
 # ----------------------------------------------------------------------------
 # ENV: variables de entorno permanentes dentro del contenedor
