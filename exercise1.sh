@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-
-
 NOMBRE=$1
 APELLIDO=$2
 
