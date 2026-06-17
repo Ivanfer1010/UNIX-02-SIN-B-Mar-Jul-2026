@@ -38,3 +38,5 @@ CTRL-Z sleep 100
 #[1]+  Detenido                   sleep 100
 bg %1
 #[1]+ sleep 100&
+nohup ./excercise2.sh &
+#[1] 28812
