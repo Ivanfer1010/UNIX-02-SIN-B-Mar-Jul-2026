@@ -14,3 +14,12 @@ sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
 grep -o "Godzilla" newlog.txt #This command searches for the exact word "Godzilla" within the newlog.txt file and, thanks to the -o option, extracts and displays on the screen only that word each time it finds it, ignoring the rest of the text in the affected lines.
 grep -o "Mozilla" log.txt #It is configured to search for the term "Mozilla" within the log.txt file. When executed, the system will scan the entire document and return a clean list containing only the word "Mozilla" for each instance it is detected in the text.
 sed 's/ //g' log.txt > newlog1.txt
+cat newlog1.txt
+sed '1d' newlog.txt > newlogd.txt
+cat newlogd.txt
+sed '$d' newlog.txt > newlogl.txt
+cat newlog1.txt
+sed '5,7d' newlog.txt > newlog57.txt
+cat newlog57.txt
+sed -n '2,15 p' log.txt
+sed -i '1d' log.txt
