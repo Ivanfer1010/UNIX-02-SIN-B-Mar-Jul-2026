@@ -38,5 +38,5 @@ CTRL-Z sleep 100
 #[1]+  Detenido                   sleep 100
 bg %1
 #[1]+ sleep 100&
-nohup ./excercise2.sh &
+nohup ./excercise2.sh &   #It runs the exercise2.sh script in the background , allowing you to continue using the terminal immediately, and ensures that the process does not stop.
 #[1] 28812

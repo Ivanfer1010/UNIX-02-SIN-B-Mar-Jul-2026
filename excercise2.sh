@@ -180,3 +180,4 @@ echo "3. Comment Quality     (Max 40): $nota_comentarios pts"
 echo "--------------------------------------------"
 echo "FINAL GRADE:                     $nota_final / 100"
 echo "--------------------------------------------"
+sleep 800
