@@ -31,4 +31,10 @@ ps -ef | grep sleep
 #root       24157       1  0 13:13 ?        00:00:00 sleep 1
 #root       24168     709  0 13:13 pts/2    00:00:00 grep --color=auto sleep
 jobs
-#[1]+  Ejecutando                 sleep 100 &
+#[1]+  Ejecutando                 sleep 100 
+fg %1
+#sleep 100
+CTRL-Z sleep 100
+#[1]+  Detenido                   sleep 100
+bg %1
+#[1]+ sleep 100&
